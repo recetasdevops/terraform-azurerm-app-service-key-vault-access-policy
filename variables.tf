@@ -1,8 +1,7 @@
-
 variable "access_policy_count" {}
 
 variable "identities" {
-  type = "map"
+  type = "list"
 }
 
 variable "key_permissions" {
