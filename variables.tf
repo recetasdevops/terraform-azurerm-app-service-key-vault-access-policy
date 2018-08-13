@@ -32,3 +32,6 @@ variable "certificate_permissions" {
 }
 variable "key_vault_name" {}
 variable "key_vault_resource_group_name" {}
+locals {
+  identities = "${flatten(var.identities)}"
+}
