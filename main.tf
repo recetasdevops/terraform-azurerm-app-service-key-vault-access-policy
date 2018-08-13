@@ -12,9 +12,9 @@ resource "azurerm_key_vault_access_policy" "default" {
   vault_name          = "${data.azurerm_key_vault.default.name}"
   resource_group_name = "${data.azurerm_key_vault.default.resource_group_name}"
 
-  tenant_id      = "${lookup(var.identities,"tenant_id")}"
-  object_id      = "${lookup(var.identities,"object_id")}"
-  application_id = "${lookup(var.identities,"object_id")}"
+  tenant_id      = "${lookup(element(var.identities, count.index),"tenant_id")}"
+  object_id      = "${lookup(element(var.identities, count.index),"object_id")}"
+  application_id = "${lookup(element(var.identities, count.index),"object_id")}"
 
   key_permissions = "${var.key_permissions}"
 
