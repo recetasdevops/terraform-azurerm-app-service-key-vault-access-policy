@@ -1,4 +1,4 @@
-# terraform-azurerm-key-vault-access-policy
+# terraform-azurerm-app-service-key-vault-access-policy
 Terraform module designed to add key vault access poicy from Azure PaaS Service and Function Apps MSI (Managed Service Identities).
 
 ## Usage
