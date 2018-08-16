@@ -50,7 +50,7 @@ resource "azurerm_function_app" "test" {
 
 # Add KeyVault Policies from App Services MSI (Managed Services Identities)
 module "eg_key_vault_access_policies_fn_apps" {
-  source     = "git::https://github.com/transactiveltd/terraform-azurerm-key-vault-access-policy.git?ref=0.1.0"
+  source     = "git::https://github.com/transactiveltd/terraform-azurerm-app-service-key-vault-access-policy.git?ref=master"
 
   access_policy_count = 1
 
