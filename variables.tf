@@ -1,11 +1,11 @@
 variable "access_policy_count" {}
 
 variable "identities" {
-  type = "list"
+  type = list
 }
 
 variable "key_permissions" {
-  type = "list"
+  type = list
 
   default = [
     "get",
@@ -14,7 +14,7 @@ variable "key_permissions" {
 }
 
 variable "secret_permissions" {
-  type = "list"
+  type = list
 
   default = [
     "get",
@@ -23,7 +23,7 @@ variable "secret_permissions" {
 }
 
 variable "certificate_permissions" {
-  type = "list"
+  type = list
 
   default = [
     "get",
@@ -33,5 +33,5 @@ variable "certificate_permissions" {
 variable "key_vault_name" {}
 variable "key_vault_resource_group_name" {}
 locals {
-  identities = "${flatten(var.identities)}"
+  identities = flatten(var.identities)
 }
